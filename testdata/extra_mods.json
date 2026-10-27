@@ -1,0 +1,488 @@
+[
+  {
+    "slug": "botania",
+    "title": "보타니아",
+    "filename": "Botania-1.20.1-456-FORGE.jar",
+    "url": "https://cdn.modrinth.com/data/pfjLUfGv/versions/npY4sRWF/Botania-1.20.1-456-FORGE.jar",
+    "sha512": "43b82e3e101bcd2f1441be5e1cf16c4631e497c7cd50abd8bdc87701281e512673a420cec16e0529a6ed6936aa2d545398e9fe39ed9a8f3d0d26601f940327fa",
+    "size": 12226445,
+    "prefix": "Botania-"
+  },
+  {
+    "slug": "create-dragons-plus",
+    "title": "Create: Dragons Plus",
+    "filename": "CreateDragonsPlus-1.11.9.jar",
+    "url": "https://cdn.modrinth.com/data/dzb1a5WV/versions/eMalpJtP/CreateDragonsPlus-1.11.9.jar",
+    "sha512": "6c9fe7b2cd0a3431cfb1b5c717fa2b03153c750f53e4cc394a2290447bc52848891627b0131f6e6dbc947e6f0c618e416d34942f9dd963a025f9ad18c015716a",
+    "size": 988334,
+    "prefix": "CreateDragonsPlus-"
+  },
+  {
+    "slug": "create-steam-n-rails",
+    "title": "Create: Steam 'n' Rails",
+    "filename": "Steam_Rails-1.7.3+forge-mc1.20.1.jar",
+    "url": "https://cdn.modrinth.com/data/ZzjhlDgM/versions/7Uk6lWkU/Steam_Rails-1.7.3%2Bforge-mc1.20.1.jar",
+    "sha512": "c46bd5e48e64914433157e8cb92f5679d3407fc6e3e3b40a1a41b043efa6f32a2eb9c486313358e92f9e4cf169710ab161bbfa86a2763afcadff3b6e92021175",
+    "size": 17042037,
+    "prefix": "Steam_Rails-"
+  },
+  {
+    "slug": "another-furniture",
+    "title": "Another Furniture",
+    "filename": "another_furniture-forge-1.20.1-3.0.4.jar",
+    "url": "https://cdn.modrinth.com/data/ulloLmqG/versions/S9tNKT5R/another_furniture-forge-1.20.1-3.0.4.jar",
+    "sha512": "c57011a7e078cdb05ca05123d2ca3d01b1f3baca3555c067150e23d75268bb250b45a780da1488a49c08c46f6ed38e883f6cd47981babffe43b5f501984f1afc",
+    "size": 2463633,
+    "prefix": "another_furniture-"
+  },
+  {
+    "slug": "create",
+    "title": "Create",
+    "filename": "create-1.20.1-6.0.8.jar",
+    "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/8amzvn9x/create-1.20.1-6.0.8.jar",
+    "sha512": "5b51f5d31437d9bfbf221b67459abd87260d284874e1e23b7ed1d522b23a48059a3b1d2c1c541428da35dc6be15561b4f3c7f36aac6df3a0e8db6a278f6b0316",
+    "size": 19170905,
+    "prefix": "create-1.20.1-"
+  },
+  {
+    "slug": "create-enchantment-industry",
+    "title": "Create: Enchantment Industry",
+    "filename": "create-enchantment-industry-2.5.4b.jar",
+    "url": "https://cdn.modrinth.com/data/JWGBpFUP/versions/fs3kihCQ/create-enchantment-industry-2.5.4b.jar",
+    "sha512": "f8192da48ccf81821bb5c6666201e084611a877fc3ea188031aa15c66eee70a4c5e6484e5a20badde83bce30091e507ece81168a11984f406a683f407af0f75a",
+    "size": 1653501,
+    "prefix": "create-enchantment-industry-"
+  },
+  {
+    "slug": "create-new-age",
+    "title": "Create: New Age",
+    "filename": "create-new-age-1.2.0+forge-mc1.20.1.jar",
+    "url": "https://cdn.modrinth.com/data/FTeXqI9v/versions/7vnwbouk/create-new-age-1.2.0%2Bforge-mc1.20.1.jar",
+    "sha512": "2a24913624febc797275654dd31a6ef0aeb63da71d243b5ab9c58b7fc8e51455f24645bed87ec430bd166c69e23df044dcfcf5fc2bde1d8b7c1c3206724a7a07",
+    "size": 1206077,
+    "prefix": "create-new-age-"
+  },
+  {
+    "slug": "create-connected",
+    "title": "Create: Connected",
+    "filename": "create_connected-1.2.3-mc1.20.1-all.jar",
+    "url": "https://cdn.modrinth.com/data/Vg5TIO6d/versions/6gnvaVkN/create_connected-1.2.3-mc1.20.1-all.jar",
+    "sha512": "eed01b0d7c96b023bf838208819f52d57606089ce6c1f0e824b212bb53b4e00e35d7d3c7066f125e541799b64c0766b526045ced59bb0dbdce9a7075ab3bdfce",
+    "size": 6791072,
+    "prefix": "create_connected-"
+  },
+  {
+    "slug": "create-jetpack",
+    "title": "Create Jetpack",
+    "filename": "create_jetpack-forge-4.4.6.jar",
+    "url": "https://cdn.modrinth.com/data/UbFnAd4l/versions/Ft2vxKG4/create_jetpack-forge-4.4.6.jar",
+    "sha512": "a0536411e314a505938b2bbef80b9b1bfb504b29e04c1791ba87414060a60731ae29de6deb32e352ccf65e6c14a4675ed2ee4e4414afa526a559aa04e51fe606",
+    "size": 638327,
+    "prefix": "create_jetpack-"
+  },
+  {
+    "slug": "createaddition",
+    "title": "Create Crafts & Additions",
+    "filename": "createaddition-1.20.1-1.3.3.jar",
+    "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/9LgyB6Yb/createaddition-1.20.1-1.3.3.jar",
+    "sha512": "a34f5c3b0226069d2882a3e23ba0e364a78bc5d26983b0cecea8d998718f454d3238ab7c5b4b3ef1749b6f2b26a4e427839c7c32468558fa7a8edb0edc727d10",
+    "size": 1577313,
+    "prefix": "createaddition-"
+  },
+  {
+    "slug": "create-big-cannons",
+    "title": "Create Big Cannons",
+    "filename": "createbigcannons-5.11.4-mc.1.20.1-forge.jar",
+    "url": "https://cdn.modrinth.com/data/GWp4jCJj/versions/ZRgu5o3x/createbigcannons-5.11.4-mc.1.20.1-forge.jar",
+    "sha512": "11b919dcce377dfce563c9250e287e870ac22b622ac9b4a4839bcc2ea8b894956d42632ef5f9d2701534aa3eba6f896761e26ada0e6bbd2042353507164b7dd0",
+    "size": 4058306,
+    "prefix": "createbigcannons-"
+  },
+  {
+    "slug": "create-deco",
+    "title": "Create Deco",
+    "filename": "createdeco-2.0.3-1.20.1-forge.jar",
+    "url": "https://cdn.modrinth.com/data/sMvUb4Rb/versions/e9gaSRMd/createdeco-2.0.3-1.20.1-forge.jar",
+    "sha512": "50b7e9bb7b09d720160b2491528f2ab751ad2299541be75cc6941e6b6c3d2d40faff5c5fa07a1bea9e3f43b73146ef6e0fdf6a106e65246b9767dd81053766bf",
+    "size": 3509013,
+    "prefix": "createdeco-"
+  },
+  {
+    "slug": "create-diesel-generators",
+    "title": "Create: Diesel Generators",
+    "filename": "createdieselgenerators-1.20.1-1.3.12.jar",
+    "url": "https://cdn.modrinth.com/data/ZM3tt6p1/versions/DTQVvA5H/createdieselgenerators-1.20.1-1.3.12.jar",
+    "sha512": "fc9aebaa5b654078be4736e1c35cc34edda0986db75fc3ce1391a86a499df6dcb3958d9854d402f5479eeb38d0f9388223b0359a34d594589e75ed3a58dd45a1",
+    "size": 3128610,
+    "prefix": "createdieselgenerators-"
+  },
+  {
+    "slug": "decorative-blocks",
+    "title": "Decorative Blocks",
+    "filename": "decorative_blocks-forge-1.20.1-4.1.3.jar",
+    "url": "https://cdn.modrinth.com/data/t6BIRVZn/versions/nGmyeiug/decorative_blocks-forge-1.20.1-4.1.3.jar",
+    "sha512": "e48dae175eb053ce0f7035e634264f8e84e60560609a5e0391bff01c3e584e6c0fa28fd88fde852b674876b8e21f923444c9ad2726326e337da2d69af0261a70",
+    "size": 573928,
+    "prefix": "decorative_blocks-"
+  },
+  {
+    "slug": "interiors",
+    "title": "Create: Interiors",
+    "filename": "interiors-1.20.1-forge-0.6.0.jar",
+    "url": "https://cdn.modrinth.com/data/r4Knci2k/versions/3Gpm5qDT/interiors-1.20.1-forge-0.6.0.jar",
+    "sha512": "02f3f01d627f315a5185848ab20bee3d5269705e6fe9a1f6bb57ae47954231a04c8360c0ebf57c3e0fad2bac8cff0e97417f63982caf4545c624805a02984b5e",
+    "size": 489265,
+    "prefix": "interiors-"
+  },
+  {
+    "slug": "do-api",
+    "title": "Let's Do API",
+    "filename": "letsdo-API-forge-1.2.15-forge.jar",
+    "url": "https://cdn.modrinth.com/data/4XJZeZbM/versions/uEaTMht9/letsdo-API-forge-1.2.15-forge.jar",
+    "sha512": "36bb6b923d7f4c774372eb90e81bbdf43c6629cbb4e38d4439575175b4ac197bf218c4d64b3595ff92735ed8943269a7891cf24c8c10f4e3d55269d8d7cf5c2c",
+    "size": 1440591,
+    "prefix": "letsdo-API-"
+  },
+  {
+    "slug": "lets-do-bakery",
+    "title": "Bakery",
+    "filename": "letsdo-bakery-forge-1.1.15.jar",
+    "url": "https://cdn.modrinth.com/data/WFwYiVoG/versions/Jo8EwiDR/letsdo-bakery-forge-1.1.15.jar",
+    "sha512": "2981b77f946fbc68638a77a16c0cecab82cab3b0f71d956dc22d7c9880ee3109103b6486d4531ecbc1069d9e7681100f6f83414c09a49922d0c993b09eaf2dbb",
+    "size": 1539376,
+    "prefix": "letsdo-bakery-"
+  },
+  {
+    "slug": "lets-do-candlelight",
+    "title": "Candlelight",
+    "filename": "letsdo-candlelight-forge-1.2.13.jar",
+    "url": "https://cdn.modrinth.com/data/mPND0Adp/versions/ImuP9F4N/letsdo-candlelight-forge-1.2.13.jar",
+    "sha512": "cdf2d51edd2c38aaaa27261032ddfb3e20eccd5e4eb44e5f57fca956404ef7e07dbf04d349b265a104ea1156848b3fcf3a6b278e7361b362fc77eaba13ed69fd",
+    "size": 2618138,
+    "prefix": "letsdo-candlelight-"
+  },
+  {
+    "slug": "lets-do-farm-charm",
+    "title": "Farm & Charm",
+    "filename": "letsdo-farm_and_charm-forge-1.0.14.jar",
+    "url": "https://cdn.modrinth.com/data/HJetCzWo/versions/9fzY3YV6/letsdo-farm_and_charm-forge-1.0.14.jar",
+    "sha512": "a01b6c71a916ccce10014e07c0bd12023ea3628f23a7cb062a6d9ef0c232e895d24acb6a0786e130c79b9c35bdef06fe824c5f93741074ab1d850e904d318ca8",
+    "size": 2328624,
+    "prefix": "letsdo-farm_and_charm-"
+  },
+  {
+    "slug": "lets-do-herbalbrews",
+    "title": "HerbalBrews",
+    "filename": "letsdo-herbalbrews-forge-1.0.12.jar",
+    "url": "https://cdn.modrinth.com/data/Eh11TaTm/versions/qKfEj2BA/letsdo-herbalbrews-forge-1.0.12.jar",
+    "sha512": "68db55593718c1998f06eb023cef456106a7f8c357288af1036c303fc9a9bb0018b19bef159e004c0b60ed20eed9fbb3107f0f5b3035d682111b92c0f4cdd86c",
+    "size": 735868,
+    "prefix": "letsdo-herbalbrews-"
+  },
+  {
+    "slug": "lets-do-meadow",
+    "title": "Meadow",
+    "filename": "letsdo-meadow-forge-1.3.25.jar",
+    "url": "https://cdn.modrinth.com/data/ra7o6Sl7/versions/phZQOZzG/letsdo-meadow-forge-1.3.25.jar",
+    "sha512": "0d5a91be33599f51b04815fc795d5132612656812ee8a4fef9f5526754c1f3e7fd259dbbcbb15949e2e07664638fd6627d56bce2acaec0d0c4daae733ae6602a",
+    "size": 2676511,
+    "prefix": "letsdo-meadow-"
+  },
+  {
+    "slug": "lets-do-vinery",
+    "title": "Vinery",
+    "filename": "letsdo-vinery-forge-1.4.41.jar",
+    "url": "https://cdn.modrinth.com/data/1DWmBJVA/versions/2I4cH49O/letsdo-vinery-forge-1.4.41.jar",
+    "sha512": "22c900eb1542d9d47b21f9708e76f25d82dc2393a800ed5e447ba34ef8756d6460e4b981a7d7585ddcf2796c5e6b2d8355403e5c830966bc5aa628f6468500e9",
+    "size": 2041283,
+    "prefix": "letsdo-vinery-"
+  },
+  {
+    "slug": "macaws-bridges",
+    "title": "Macaw's Bridges",
+    "filename": "mcw-bridges-3.1.2-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/GURcjz8O/versions/KImk0Oo1/mcw-bridges-3.1.2-mc1.20.1forge.jar",
+    "sha512": "931fa9077b5a7b286de7c08bf885e393c5632ebb499b0ff5a8d0dfe8b39edd42f6705f51e5755af7dc6a74eb08023ebf2001fe87d064aa9584057d52714815ce",
+    "size": 693579,
+    "prefix": "mcw-bridges-"
+  },
+  {
+    "slug": "macaws-doors",
+    "title": "Macaw's Doors",
+    "filename": "mcw-doors-1.1.5-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/kNxa8z3e/versions/n8BlIUm3/mcw-doors-1.1.5-mc1.20.1forge.jar",
+    "sha512": "dc9180f0cfb049907be62a3d6429b7c469b4d7a44c1c5a8b9617aa673843f880c354febf22a22d4a995ea2ec9e5a75bb4628dc499bfb4a199b2b9e6a9ba39e26",
+    "size": 1246753,
+    "prefix": "mcw-doors-"
+  },
+  {
+    "slug": "macaws-furniture",
+    "title": "Macaw's Furniture",
+    "filename": "mcw-furniture-3.4.1-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/dtWC90iB/versions/mvGf4LNK/mcw-furniture-3.4.1-mc1.20.1forge.jar",
+    "sha512": "8f15825b2a7dbee68f9fde4f6c6d56b0064365832459ac526e8bdf5d00bf5a5348cc19540dc89f2e78b1746941357cc4382ffa409dacca47fe1877a486af60db",
+    "size": 2174615,
+    "prefix": "mcw-furniture-"
+  },
+  {
+    "slug": "macaws-lights-and-lamps",
+    "title": "Macaw's Lights and Lamps",
+    "filename": "mcw-lights-1.1.5-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/w4an97C2/versions/H1a9Tx4h/mcw-lights-1.1.5-mc1.20.1forge.jar",
+    "sha512": "7da79e0c8fd7e0ac75aaf27a67b02f5d828b1d16d0c7536b65c9e0937f692b500bf90ea18ba8912d375d94fc271ba31897c0fa58e29dad4b76be67cb9a525d95",
+    "size": 547779,
+    "prefix": "mcw-lights-"
+  },
+  {
+    "slug": "macaws-fences-and-walls",
+    "title": "Macaw's Fences and Walls",
+    "filename": "mcw-mcwfences-1.2.1-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/GmwLse2I/versions/HnyfcyJ9/mcw-mcwfences-1.2.1-mc1.20.1forge.jar",
+    "sha512": "092afb73ed251fb4261c537bebe1a01bb3e6a96775f4a2244ec21927486955fe240e053ec23b6b575a994ef80e70a27130beb92f3de6ddf71b1d06ddeeba53ef",
+    "size": 708634,
+    "prefix": "mcw-mcwfences-"
+  },
+  {
+    "slug": "macaws-paths-and-pavings",
+    "title": "Macaw's Paths and Pavings",
+    "filename": "mcw-mcwpaths-1.1.1-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/VRLhWB91/versions/yHkcTSFb/mcw-mcwpaths-1.1.1-mc1.20.1forge.jar",
+    "sha512": "52c08de819b80616602df9350241ec37581ebbe323a779bb935c3167b698893a97df3c5190c249ec90a0beb68da4532745c89675dfc9857d1a18c20fb8c5c1cd",
+    "size": 812573,
+    "prefix": "mcw-mcwpaths-"
+  },
+  {
+    "slug": "macaws-stairs",
+    "title": "Macaw's Stairs",
+    "filename": "mcw-mcwstairs-1.0.2-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/iP3wH1ha/versions/wL67k7Aj/mcw-mcwstairs-1.0.2-mc1.20.1forge.jar",
+    "sha512": "cd96b04b86e026048971174b9c9588bd9ff65e8e4411a268032cbeffd646d7ae3f9ece5ac0a6bd95eb9b12de9d413003379c63916019e6befdc2f3da05690a14",
+    "size": 554055,
+    "prefix": "mcw-mcwstairs-"
+  },
+  {
+    "slug": "macaws-windows",
+    "title": "Macaw's Windows",
+    "filename": "mcw-mcwwindows-2.4.2-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/C7I0BCni/versions/SSIlzrPf/mcw-mcwwindows-2.4.2-mc1.20.1forge.jar",
+    "sha512": "904a1aba082944f14dd012704b5867e1da2ba51e0139c209c7dcd0303bb170f05d78626027dceec2a2d6cf607f6f1324646637d32d12bc085617d9e60fd9072c",
+    "size": 1320692,
+    "prefix": "mcw-mcwwindows-"
+  },
+  {
+    "slug": "macaws-roofs",
+    "title": "Macaw's Roofs",
+    "filename": "mcw-roofs-2.3.2-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/B8jaH3P1/versions/31e80GhE/mcw-roofs-2.3.2-mc1.20.1forge.jar",
+    "sha512": "ff7d8be7efb2c427dba8898ed181804b93d2d7523227a190a4c100370f485e5e734c83930b6888652c9469bf01b89a3c7fd2cd00e37c5b6021ec9bd3aa6ea3e3",
+    "size": 1864023,
+    "prefix": "mcw-roofs-"
+  },
+  {
+    "slug": "macaws-trapdoors",
+    "title": "Macaw's Trapdoors",
+    "filename": "mcw-trapdoors-1.1.5-mc1.20.1forge.jar",
+    "url": "https://cdn.modrinth.com/data/n2fvCDlM/versions/5B4awHaA/mcw-trapdoors-1.1.5-mc1.20.1forge.jar",
+    "sha512": "bbe9751bd9302968a5984a01d8836c1b3f2c862cbbb9a1de13268a15dd2da35d305a4a5585ec481e473bd6e06e2a9275ef5f4197368aa9f0db6275520ac100c4",
+    "size": 604510,
+    "prefix": "mcw-trapdoors-"
+  },
+  {
+    "slug": "rpl",
+    "title": "Ritchie's Projectile Library",
+    "filename": "ritchiesprojectilelib-2.1.1+mc.1.20.1-forge.jar",
+    "url": "https://cdn.modrinth.com/data/B3pb093D/versions/PdGBsNte/ritchiesprojectilelib-2.1.1%2Bmc.1.20.1-forge.jar",
+    "sha512": "454e1808261940dc135ed8af4f0fa44296ec502b985104e42178146adc539a29cd7c56369c075f78d60da4f9465229aceaafa8f5724a008205aa65b5a81e4419",
+    "size": 78625,
+    "prefix": "ritchiesprojectilelib-"
+  },
+  {
+    "slug": "slice-and-dice",
+    "title": "Create Slice & Dice",
+    "filename": "sliceanddice-forge-3.6.0.jar",
+    "url": "https://cdn.modrinth.com/data/GmjmRQ0A/versions/KWLI8Ng7/sliceanddice-forge-3.6.0.jar",
+    "sha512": "b6108218d933ba6b612f2018efe1329957c0cde473f07bc405f7defa76602bb2f6749763db5734ec8547e8c5c1908ef57a9c539c90c23068ed9ab5be267e73a0",
+    "size": 588268,
+    "prefix": "sliceanddice-"
+  },
+  {
+    "slug": "azurelib",
+    "title": "AzureLib 3.1.24",
+    "filename": "azurelib-neo-1.20.1-3.1.24.jar",
+    "url": "https://cdn.modrinth.com/data/7zlUOZvb/versions/BF48e0nr/azurelib-neo-1.20.1-3.1.24.jar",
+    "sha512": "d69cdadd1e2a92e54e4b7643fd7747e4208f8388468bb15dba7d819dbb3d07d74d3090d8f1555fe3faeeee0b42952ddea93609e1fb0e6c43dcf3bf52ada46e92",
+    "size": 1163196,
+    "prefix": "azurelib-neo-1.20.1-"
+  },
+  {
+    "slug": "sophisticated-backpacks",
+    "title": "Sophisticated Backpacks (배낭)",
+    "filename": "sophisticatedbackpacks-1.20.1-3.26.14.2226.jar",
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/HEEmP5R4/sophisticatedbackpacks-1.20.1-3.26.14.2226.jar",
+    "sha512": "d6c01154540ec77ebb45f14e982ec0c2706b5796784c4c2585e7eb09f5d0d6888e3b0beb5305cee9c13eaa937f1cfdb53b0081ade9fb60073733e3b9fdea1b7b",
+    "size": 1226134,
+    "prefix": "sophisticatedbackpacks-"
+  },
+  {
+    "slug": "entityculling",
+    "title": "Entity Culling 1.10.5 (Nightfall 소환검 크래시 방지)",
+    "filename": "entityculling-forge-1.10.5-mc1.20.1.jar",
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/MloBcsQQ/entityculling-forge-1.10.5-mc1.20.1.jar",
+    "sha512": "00f4d6987a7902597e6e3f178f77308d795b2e1c46a2bfdad79f718e8a7417373971b83004cbbe491582d91d1658718187383a368a813af0266ba99804746814",
+    "size": 1590221,
+    "prefix": "entityculling-forge-"
+  },
+  {
+    "slug": "mcef",
+    "title": "MCEF (게임 속 크롬)",
+    "filename": "mcef-forge-2.1.6-1.20.1.jar",
+    "url": "https://cdn.modrinth.com/data/TObQ0HxZ/versions/x91l6OKB/mcef-forge-2.1.6-1.20.1.jar",
+    "sha512": "6df8c8e70ab15b3662404a3a398c18689fb7591e84e1a913d8939bee144f030cd2aeaee4e68f1ed159881a59796a37a7f628dd442e6ba7836005e14ad7b9704d",
+    "size": 218417,
+    "prefix": "mcef-forge-"
+  },
+  {
+    "slug": "craftbrowser",
+    "title": "CraftBrowser (웹 스크린)",
+    "filename": "craftbrowser-1.0.0.jar",
+    "url": "https://edge.forgecdn.net/files/8433/11/craftbrowser-1.0.0.jar",
+    "sha512": "e14a6531dcdfdf03bf68ef57f7426905257798fdab0e84e524f6d9689f12235bf6f4e3ec704a7581ee34f2a97aa900843032b0709b58b4b0d9f280e228b318e8",
+    "size": 659833,
+    "prefix": "craftbrowser-"
+  },
+  {
+    "slug": "p1neros-epic-bow",
+    "title": "P1nero's Epic Bow (활 전투)",
+    "filename": "p1nero_bow-forge1.20.1-20.14.1.6.jar",
+    "url": "https://edge.forgecdn.net/files/7725/196/p1nero_bow-forge1.20.1-20.14.1.6.jar",
+    "sha512": "50097d7e0b345c51c807f4b7fc025dc08e780065cdde0ec28f51bbbe1e1aeac00c66f2320732e29ff1176cc2b2a2190a1e31e06af0093b3e26101eea4aa1b9c3",
+    "size": 932621,
+    "prefix": "p1nero_bow-"
+  },
+  {
+    "slug": "epic-fight-dodge-parry-reward",
+    "title": "Dodge Parry Reward (회피·패리 보상)",
+    "filename": "dodge_parry_reward-1.20.1forge-20.14.3.jar",
+    "url": "https://edge.forgecdn.net/files/7867/343/dodge_parry_reward-1.20.1forge-20.14.3.jar",
+    "sha512": "9e2860fb88704ed8908a1d16dcb1920e7bf001ae544eef6e64b0d76dfdeb382df046572845bb3c9fda805ed671ab4b1463b3fea714b24c12e8fc8107dd850d1e",
+    "size": 287404,
+    "prefix": "dodge_parry_reward-"
+  },
+  {
+    "slug": "epic-fight-dual-greatswords-updated",
+    "title": "Dual Greatswords (대검 쌍수)",
+    "filename": "dualgreatswords-20.14.1.jar",
+    "url": "https://edge.forgecdn.net/files/7647/220/dualgreatswords-20.14.1.jar",
+    "sha512": "517bccdeca04f9195f65cb9266b7fe63c4b605db5e8db1c632fa3bc41ce87f765bdd331bea0d389acad2545a098a4c807f85c86bddeb3012b9fa9f146dbc1118",
+    "size": 175091,
+    "prefix": "dualgreatswords-"
+  },
+  {
+    "slug": "efparrycompats",
+    "title": "EFN Parry Compats (나이트폴 패리 호환)",
+    "filename": "efnparrycompats-1.2-HOTFIX.jar",
+    "url": "https://edge.forgecdn.net/files/9102/573/efnparrycompats-1.2-HOTFIX.jar",
+    "sha512": "bffea00406299e931db1408ef6a7c3a9f2f7414f2cf5213477bc78850ec89faa5390f747ce2f01aaa67263282839223f2c3a700f1f2d17994601a3b9522f8933",
+    "size": 24617,
+    "prefix": "efnparrycompats-"
+  },
+  {
+    "slug": "wom-shaders-overlays-effects",
+    "title": "WoM Shaders & Overlays (WOM 연출)",
+    "filename": "WeaponsOfMiracle_VFX-v1.2+[Forge-NeoForge].jar",
+    "url": "https://edge.forgecdn.net/files/8694/692/WeaponsOfMiracle_VFX-v1.2%2B%5BForge-NeoForge%5D.jar",
+    "sha512": "46b4d563df2e2fc25be72ce344881f58acc57b10d7242f64850e2b1e94ce5bf9f14c3042f3ae64812ee82548cd18a2397a70f57a9dd514c9ad1ae0b292bb5081",
+    "size": 39816786,
+    "prefix": "WeaponsOfMiracle_VFX-"
+  },
+  {
+    "slug": "epic-fight-the-mimic",
+    "title": "Epic Fight: The Mimic (보스)",
+    "filename": "mimic-1.0.7.jar",
+    "url": "https://edge.forgecdn.net/files/8656/688/mimic-1.0.7.jar",
+    "sha512": "900d56f0dd7a04061b6906ab30c24d85804149df71eb1c3a1305ec97dfb6c0166c27a99ccdf4a1d128f64a86313ca2b893573dd2fc17e969f0f263dd96a60dc0",
+    "size": 6412801,
+    "prefix": "mimic-"
+  },
+  {
+    "slug": "epic-fight-wraithon",
+    "title": "Epic Fight: The Wraithon (보스)",
+    "filename": "wraithon-forge1.20.1-1.1.11.jar",
+    "url": "https://edge.forgecdn.net/files/7702/162/wraithon-forge1.20.1-1.1.11.jar",
+    "sha512": "f2f62dd46748fbbfdd4801104cc451efc16929522fc61f6e3e945b6f7752586f48ec69909f65762d8a45538b0a53b485fce22d0a2ba143297b778c4abadd7158",
+    "size": 31054582,
+    "prefix": "wraithon-"
+  },
+  {
+    "slug": "epic-fight-the-arachne",
+    "title": "Epic Fight: Arachne (보스)",
+    "filename": "epicfight_arachne-1.0.0.jar",
+    "url": "https://edge.forgecdn.net/files/7529/944/epicfight_arachne-1.0.0.jar",
+    "sha512": "1fa3141219480ca032aeeb7aec07e1d266506f60bad1b3f2a5986f06d76af47ec05042fb1f2a2ff01a75b253acfe5eb800c324fdcb6fafed8a3704828476b2d2",
+    "size": 7338704,
+    "prefix": "epicfight_arachne-"
+  },
+  {
+    "slug": "epic-fight-the-leonidas",
+    "title": "Epic Fight: Leonidas (보스)",
+    "filename": "epicfight_leonidas-1.0.1.jar",
+    "url": "https://edge.forgecdn.net/files/7619/585/epicfight_leonidas-1.0.1.jar",
+    "sha512": "9a9fb932bc0284f82f4c7898026b15adccd36d8ee2514e06cfc17430d3822883bb5725b94f42bed60d55b9c9678c6de1adf0d208d3ed25298ab12cf5baef9fbc",
+    "size": 8366555,
+    "prefix": "epicfight_leonidas-"
+  },
+  {
+    "slug": "tkvm-enemies-dark-knight",
+    "title": "TKVM Dark Knight (흑기사 보스)",
+    "filename": "tkvm_dark_knight-4.1.jar",
+    "url": "https://edge.forgecdn.net/files/8691/606/tkvm_dark_knight-4.1.jar",
+    "sha512": "2f0d57ca517c3c3abb747e914859203ba979fbaf456ce88b2daef42602250571b9bacc437cd9842e18437348f47d27b27ea4a505536216a19ea1da075b1136c3",
+    "size": 3082764,
+    "prefix": "tkvm_dark_knight-"
+  },
+  {
+    "slug": "combat-evolution",
+    "title": "Combat Evolution 2.3.2",
+    "filename": "CombatEvolution-2.3.2-Forge-1.20.1.jar",
+    "url": "https://edge.forgecdn.net/files/9317/571/CombatEvolution-2.3.2-Forge-1.20.1.jar",
+    "sha512": "727bf3150fe645a2884281bfd272b2d209d9622feffb4ebbffb307d574832b8efc17b6415aa07d2e81db63395cb3a1ab2db834c58a464aeb4d97cf58011b62eb",
+    "size": 3092999,
+    "prefix": "CombatEvolution-2."
+  },
+  {
+    "slug": "combat-evolution-x-more-execution-animations",
+    "title": "CE More Execution Animations 1.4",
+    "filename": "CombatEvolution-MoreExecutionAnimations-1.20.1-1.4.jar",
+    "url": "https://edge.forgecdn.net/files/9296/125/CombatEvolution-MoreExecutionAnimations-1.20.1-1.4.jar",
+    "sha512": "46882221dd1e9f2056055c4177a57ffe580bb25cceeabd6028ad5b9b044827c35ca2fdc14a08d813ac2837e868f62c972b9437b928dbbafe5f9937fbb542f486",
+    "size": 2700926,
+    "prefix": "CombatEvolution-MoreExecutionAnimations-"
+  },
+  {
+    "slug": "epic-fight-weapons-of-miracles-expansion-wom-plus",
+    "title": "WOM Plus 20.14.1.3.2",
+    "filename": "womplus-20.14.1.3.2.jar",
+    "url": "https://edge.forgecdn.net/files/9233/47/womplus-20.14.1.3.2.jar",
+    "sha512": "ab236468284fed0d0d34e6811d0e79aa9c85f86517c577ea6c63c56fca835325f8e8fcb04443df2e5ea451522423c8eef047aa0a8fc3416e0789bcce8f191aec",
+    "size": 9257701,
+    "prefix": "womplus-"
+  },
+  {
+    "slug": "mobs-epicfied",
+    "title": "Mobs Epicfied 1.0.6",
+    "filename": "mobs_epicfied-1.0.6.jar",
+    "url": "https://edge.forgecdn.net/files/9123/854/mobs_epicfied-1.0.6.jar",
+    "sha512": "439de49dac4465e6f62a363405fdc6c08291dbd855c5e141e6eec607a3b87fe6c76895096c26a514a5079bcbbdc028c84eaf618240f6665bb39aa82ab34be30b",
+    "size": 113157,
+    "prefix": "mobs_epicfied-"
+  },
+  {
+    "slug": "sl-library",
+    "title": "SL Library 1.7.1",
+    "filename": "SL-Library-1.7.1-1.20.1+[Forge].jar",
+    "url": "https://edge.forgecdn.net/files/9301/670/SL-Library-1.7.1-1.20.1%2B%5BForge%5D.jar",
+    "sha512": "0b4e26bd9c8fb2f992d23820d3dc85a7d2805309292c217fe828cf075709902177ffc8ec856747c85b815f5a907b1cc9c3775f8703b5fb2af4b5aacc117d1b1b",
+    "size": 473569,
+    "prefix": "SL-Library-"
+  }
+]

@@ -1,0 +1,9 @@
+# built files
+*.exe
+rsrc_windows_amd64.syso
+/dist/
+
+# the server's data pack and its signing key never go into the repository
+*.pack
+*.key
+/pack/

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>잔불 서버 설치</title>
+<!--DEV-->
+<style>
+  :root {
+    --bg: #141519; --side: #1a1c21; --card: #202329; --card2: #292d35; --line: #2e323a;
+    --text: #f2f4f6; --sub: #a0a6b0; --muted: #6e7480;
+    --ember: #ff8a3d; --ember-soft: rgba(255,138,61,.14); --gold: #ffc94d; --green: #4cd08f; --red: #ff6b6b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif; font-size: 14px;
+    -webkit-font-smoothing: antialiased; user-select: none; overflow: hidden; }
+  .app { display: grid; grid-template-columns: 236px 1fr; height: 100vh; }
+  aside { background: var(--side); padding: 28px 22px; display: flex; flex-direction: column; gap: 22px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand svg { width: 26px; height: 26px; }
+  .brand b { font-size: 18px; letter-spacing: -.2px; }
+  .brand small { display: block; color: var(--sub); font-size: 12px; margin-top: 2px; }
+  .steps { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+  .steps li { display: flex; align-items: center; gap: 12px; padding: 10px 10px; border-radius: 10px; color: var(--sub); }
+  .steps li.on { background: #23262c; color: var(--text); font-weight: 600; }
+  .dot { width: 22px; height: 22px; border-radius: 11px; display: grid; place-items: center; font-size: 12px; font-weight: 700;
+    background: var(--card2); color: var(--sub); flex: none; transition: background .2s, color .2s; }
+  .steps li.done .dot { background: rgba(76,208,143,.18); color: var(--green); }
+  .steps li.on .dot { background: var(--ember); color: #1a1206; }
+  .foot { margin-top: auto; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
+  main { padding: 34px 38px 28px; overflow-y: auto; display: flex; flex-direction: column; }
+  h1 { font-size: 24px; margin: 0 0 6px; letter-spacing: -.4px; }
+  .lead { color: var(--sub); margin: 0 0 22px; line-height: 1.6; }
+  .card { background: var(--card); border-radius: 16px; padding: 18px 20px; margin-bottom: 12px; }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .status { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; flex: none; font-size: 17px; }
+  .ok { background: rgba(76,208,143,.15); color: var(--green); }
+  .warn { background: rgba(255,201,77,.15); color: var(--gold); }
+  .wait { background: var(--card2); color: var(--sub); }
+  .grow { flex: 1; min-width: 0; }
+  .t { font-weight: 600; font-size: 15px; }
+  .s { color: var(--sub); font-size: 13px; margin-top: 3px; line-height: 1.55; overflow-wrap: anywhere; }
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  button { font: inherit; border: 0; border-radius: 12px; padding: 11px 16px; cursor: pointer; font-weight: 600;
+    background: var(--card2); color: var(--text); transition: background .15s, transform .08s, opacity .15s; }
+  button:hover { background: #333842; }
+  button:active { transform: scale(.98); }
+  button.primary { background: var(--ember); color: #1a1206; }
+  button.primary:hover { background: #ff9b57; }
+  button:disabled { opacity: .45; cursor: default; transform: none; }
+  button.big { width: 100%; padding: 15px; font-size: 16px; border-radius: 14px; }
+  .seg { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 14px; }
+  .seg button { padding: 12px 0; position: relative; }
+  .seg button.sel { background: var(--ember-soft); color: var(--ember); box-shadow: inset 0 0 0 1.5px var(--ember); }
+  .tag { position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background: var(--ember); color: #1a1206;
+    font-size: 10px; padding: 2px 6px; border-radius: 6px; white-space: nowrap; }
+  .note { color: var(--muted); font-size: 12.5px; margin-top: 10px; line-height: 1.6; }
+  .alert { background: rgba(255,201,77,.1); color: var(--gold); border-radius: 12px; padding: 12px 14px; font-size: 13px; margin-top: 12px; line-height: 1.55; }
+  .err { background: rgba(255,107,107,.1); color: var(--red); }
+  label.check { display: flex; gap: 8px; align-items: center; color: var(--sub); font-size: 13px; margin-top: 12px; cursor: pointer; }
+  label.check input { accent-color: var(--ember); width: 16px; height: 16px; }
+  select { font: inherit; background: var(--card2); color: var(--text); border: 0; border-radius: 10px; padding: 9px 12px; margin-top: 12px; width: 100%; }
+  ul.list { list-style: none; padding: 0; margin: 0; }
+  ul.list li { display: flex; gap: 12px; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--line); }
+  ul.list .t { font-size: 14px; } ul.list .s { margin-top: 1px; font-size: 12.5px; }
+  ul.list li:last-child { border: 0; }
+  .spacer { flex: 1; }
+  .nav { display: flex; gap: 8px; margin-top: 18px; }
+  .nav .spacer + button { min-width: 120px; }
+  .fade { animation: fade .25s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .spin { width: 16px; height: 16px; border: 2px solid var(--card2); border-top-color: var(--ember); border-radius: 50%; animation: sp 0.8s linear infinite; }
+  @keyframes sp { to { transform: rotate(360deg); } }
+  kbd { background: var(--card2); border-radius: 6px; padding: 2px 7px; font-family: inherit; font-weight: 700; color: var(--text); }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="brand">
+      <svg viewBox="0 0 32 32"><path fill="#ff8a3d" d="M16 2l7 9 3 8-2 7-8 4-8-4-2-7 4-6 2 4 2-8z"/><path fill="#1a1c21" d="M16 14l4 6-1 5-3 2-3-2-1-4z"/></svg>
+      <div><b>잔불 서버</b><small>Soulrend 8.5.2 간편 설치</small></div>
+    </div>
+    <ul class="steps" id="steps"></ul>
+    <div class="foot">Soulrend는 CurseForge에서, 추가 모드는 Modrinth에서, 한글패치는 모루에서 각자 받아요. 이 설치기에는 우리가 만든 잔불 모드와 한글 보충팩만 들어 있어요.<br><span id="ver"></span></div>
+  </aside>
+  <main id="main"></main>
+</div>
+<script>
+const STEPS = ["모드팩", "한글 패치", "메모리", "설치"];
+let S = null, step = 0, chosen = null, mem = 0, skipMoru = false, keepMem = false, busy = false, result = null, error = "";
+
+window.__ip = { seq: 1, wait: {},
+  call(method, ...params) {
+    const id = this.seq++;
+    const raw = JSON.stringify({ id, method, params });
+    return new Promise((res, rej) => {
+      this.wait[id] = { res, rej };
+      if (window.chrome && window.chrome.webview) window.chrome.webview.postMessage(raw);
+      else if (window.__ipSend) window.__ipSend(raw);
+    });
+  },
+  done(id, ok, v) { const w = this.wait[id]; if (!w) return; delete this.wait[id]; ok ? w.res(v) : w.rej(new Error(v)); }
+};
+const call = (...a) => __ip.call(...a);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const base = p => String(p || "").split(/[\\/]/).pop();
+
+function inst() {
+  const all = (S && S.instances) || [];
+  if (chosen) { const f = all.find(i => i.dir === chosen); if (f) return f; }
+  return all[0] || null;
+}
+function packOK() { const i = inst(); return !!(i && i.right); }
+function moruOK() { return !!(S && S.moru && S.moru.pack); }
+
+async function refresh() {
+  try { S = await call("state"); } catch (e) { return; }
+  if (!mem) mem = S.recommendMB;
+  document.getElementById("ver").textContent = "설치기 " + S.version + (S.data ? " · 데이터 " + S.data : "");
+  if (!busy) render();
+}
+
+function stepsBar() {
+  const done = [packOK(), moruOK() || skipMoru, step > 2, !!result];
+  if (result) step = 4;
+  document.getElementById("steps").innerHTML = STEPS.map((n, i) =>
+    `<li class="${i === step ? "on" : ""} ${done[i] && i !== step ? "done" : ""}"><span class="dot">${done[i] && i !== step ? "✓" : i + 1}</span>${n}</li>`).join("");
+}
+
+function nav(back, nextLabel, nextOK, nextFn) {
+  return `<div class="spacer"></div><div class="nav">${back ? `<button onclick="go(${step - 1})">이전</button>` : ""}<div class="spacer"></div>
+    ${nextLabel ? `<button class="primary" ${nextOK ? "" : "disabled"} onclick="${nextFn || `go(${step + 1})`}">${nextLabel}</button>` : ""}</div>`;
+}
+function go(i) { step = i; error = ""; render(true); }
+let pickMsg = "";
+async function pickDir() {
+  pickMsg = "폴더를 고르는 창을 열었어요 (작업 표시줄에 숨어 있을 수도 있어요)…"; render();
+  try {
+    const r = await call("pickFolder");
+    if (!r || !r.picked) pickMsg = "";
+    else pickMsg = r.found > 0 ? "찾았어요!" : "그 폴더에서는 Soulrend 프로필을 못 찾았어요: " + r.path;
+  } catch (e) { pickMsg = "폴더를 고르지 못했어요: " + e.message; }
+  await refresh(); render();
+}
+
+function render(anim) {
+  stepsBar();
+  const m = document.getElementById("main");
+  let h = "";
+  if (!S) { h = `<div class="row"><div class="spin"></div><span class="s">확인하는 중…</span></div>`; }
+  else if (result) h = doneView();
+  else if (step === 0) h = packView();
+  else if (step === 1) h = moruView();
+  else if (step === 2) h = memView();
+  else h = installView();
+  m.innerHTML = `<div class="${anim ? "fade" : ""}" style="display:flex;flex-direction:column;min-height:100%">${h}</div>`;
+}
+
+function packView() {
+  const all = S.instances || [], i = inst();
+  let card;
+  if (i && i.right) {
+    card = `<div class="row"><div class="status ok">✓</div><div class="grow"><div class="t">Soulrend ${esc(i.version)}를 찾았어요</div>
+      <div class="s">프로필 「${esc(i.name)}」</div></div></div>`;
+  } else if (i) {
+    card = `<div class="row"><div class="status warn">!</div><div class="grow"><div class="t">버전이 달라요 (${esc(i.version || "알 수 없음")})</div>
+      <div class="s">우리 서버는 <b>v8.5.2</b>를 써요. CurseForge에서 프로필 오른쪽 ⋯ → 「Change Version」으로 v8.5.2를 고르거나, 아래 버튼으로 새로 설치해 주세요.</div></div></div>
+      <div class="btns"><button class="primary" onclick="call('openInstall')">v8.5.2 설치하기</button><button onclick="call('openCurseForge')">CurseForge 열기</button></div>`;
+  } else {
+    card = `<div class="row"><div class="status wait"><div class="spin"></div></div><div class="grow"><div class="t">아직 Soulrend가 없어요</div>
+      <div class="s">아래 버튼을 누르면 CurseForge 앱에서 공식 모드팩 설치가 시작돼요. 설치가 끝나면 여기서 자동으로 확인해요.</div></div></div>
+      <div class="btns"><button class="primary" onclick="call('openInstall')">CurseForge에서 설치하기</button><button onclick="call('openPackPage')">모드팩 페이지 보기</button></div>
+      <div class="note">CurseForge 앱이 없다면 먼저 <b>curseforge.com/download/app</b>에서 받아 설치해 주세요. 모드팩은 처음 받을 때 1.5GB쯤 되어서 시간이 조금 걸려요.</div>
+      <div class="note">${S.scanning ? "다른 드라이브에 옮겨 둔 CurseForge 폴더도 찾는 중이에요…" : "이미 설치했는데도 못 찾으면, CurseForge 모드 폴더를 다른 곳에 두셨을 수 있어요."}
+        CurseForge에서 Soulrend 프로필 오른쪽 ⋯ → 「Open Folder」로 열리는 폴더를 아래 버튼으로 골라 주세요.</div>
+      <div class="btns"><button onclick="pickDir()">폴더 직접 고르기</button></div>${pickMsg ? `<div class="note">${esc(pickMsg)}</div>` : ""}`;
+  }
+  const pick = all.length > 1 ? `<select onchange="chosen=this.value;render()">${all.map(x => `<option value="${esc(x.dir)}" ${inst() && inst().dir === x.dir ? "selected" : ""}>${esc(x.name)} · ${esc(x.version)}</option>`).join("")}</select>` : "";
+  return `<h1>모드팩부터 준비해요</h1><p class="lead">CurseForge 앱으로 공식 Soulrend 모드팩을 설치해요. 파일은 CurseForge가 공식 서버에서 받아요.</p>
+    <div class="card">${card}${pick}</div>${nav(false, "다음", packOK())}`;
+}
+
+function moruView() {
+  const mo = S.moru || {};
+  const card = moruOK()
+    ? `<div class="row"><div class="status ok">✓</div><div class="grow"><div class="t">한글패치를 찾았어요</div>
+        <div class="s">${esc(base(mo.pack))}${mo.overrides ? "<br>" + esc(base(mo.overrides)) : "<br>덮어쓰기 파일은 없어요 (없어도 괜찮아요)"}</div></div></div>`
+    : `<div class="row"><div class="status wait"><div class="spin"></div></div><div class="grow"><div class="t">모루에서 한글패치를 받아 주세요</div>
+        <div class="s">모루 페이지에서 <b>v8.3.1</b> 한글패치의 <b>리소스팩</b>과 <b>덮어쓰기</b> 파일을 받아요. 다운로드 폴더에 받으면 여기서 자동으로 찾아요.</div></div></div>
+       <div class="btns"><button class="primary" onclick="call('openMoru')">모루 열기</button></div>`;
+  return `<h1>한글로 바꿔요</h1><p class="lead">모드 문장 대부분은 모루 한글패치가, 나머지 3,500여 줄은 우리 한글 보충팩이 채워요. 보충팩은 설치기에 들어 있어요.</p>
+    <div class="card">${card}<label class="check"><input type="checkbox" ${skipMoru ? "checked" : ""} onchange="skipMoru=this.checked;render()">모루 패치 없이 진행할게요 (나중에 다시 실행하면 넣을 수 있어요)</label></div>
+    ${nav(true, "다음", moruOK() || skipMoru)}`;
+}
+
+function memView() {
+  const opts = [6144, 8192, 10240, 12288, 16384];
+  const ram = S.ramGB ? Math.round(S.ramGB) : 0;
+  const warn = S.cfRunning ? `<div class="alert">CurseForge 앱이 켜져 있어요. 설치하기 전에 앱을 완전히 닫아 주세요 (작업 표시줄 오른쪽 아래 아이콘까지).</div>` : "";
+  return `<h1>메모리를 정해요</h1><p class="lead">Soulrend는 10GB쯤을 권장해요. PC 메모리 ${ram}GB에 맞춰 골라 뒀어요.</p>
+    <div class="card"><div class="t">게임에 줄 메모리</div><div class="s">너무 많이 주면 오히려 끊길 수 있어요. 추천값을 쓰는 걸 권해요.</div>
+      <div class="seg">${opts.map(o => `<button class="${mem === o && !keepMem ? "sel" : ""}" ${keepMem ? "disabled" : ""} onclick="mem=${o};render()">${o / 1024}GB${o === S.recommendMB ? '<span class="tag">추천</span>' : ""}</button>`).join("")}</div>
+      <label class="check"><input type="checkbox" ${keepMem ? "checked" : ""} onchange="keepMem=this.checked;render()">메모리는 지금 설정 그대로 둘게요</label>${warn}</div>
+    ${nav(true, "다음", true)}`;
+}
+
+function installView() {
+  const i = inst(), mo = S.moru || {};
+  const items = [
+    ["잔불 모드", "P 잔불 화면 · 잔불 지도(P → 지도) · R 신호 · T 쪽지 · 보스 카드와 정산, 파티 HUD"],
+    ["추가 모드", "보타니아 · 농장 세트 · Create 애드온 · 건축 가구 " + (S.extraCount || 34) + "개 · Modrinth에서 받아요 (" + Math.round(S.extraMB || 100) + "MB)"],
+    ["정리", "예전 설치기가 넣은 비행선 모드와 Central Kitchen은 꺼요. 예전 설치기가 껐던 Xaero 지도는 서버에 꼭 필요해서 다시 켜요"],
+    ["설정", "블록 설정을 서버와 똑같이 맞춰요"],
+    ["한글", (moruOK() && !skipMoru ? "모루 한글패치 + " : "") + "한글 보충팩, 게임 언어 한국어"],
+    S.hasServer ? ["서버 목록", "멀티플레이에 「" + esc(S.server) + "」 추가"] : null,
+    ["멀티플레이", "Soulrend 공식 서버 선택 화면과 공식 서버 목록이 뜨지 않게 해요 (모드 안의 「다시 보지 않기」 설정)"],
+    ["메모리", keepMem ? "그대로 두기" : (mem / 1024) + "GB"],
+  ].filter(Boolean);
+  const blocked = S.cfRunning;
+  return `<h1>설치할 준비가 됐어요</h1><p class="lead">프로필 「${esc(i ? i.name : "")}」에 아래 내용을 넣어요. 원래 설정은 .bak-installer 파일로 남겨 둬요.</p>
+    <div class="card"><ul class="list">${items.map(([a, b]) => `<li><div class="status ok" style="width:28px;height:28px;border-radius:9px;font-size:13px">✓</div><div class="grow"><div class="t" style="font-size:14px">${a}</div><div class="s">${b}</div></div></li>`).join("")}</ul></div>
+    ${blocked ? `<div class="alert">CurseForge 앱을 닫아야 설치할 수 있어요. 켜져 있으면 CurseForge가 모드 목록과 메모리를 다시 덮어써요. 닫으면 자동으로 버튼이 켜져요.</div>` : ""}
+    ${error ? `<div class="alert err">${esc(error)}</div>` : ""}
+    <div class="spacer"></div><div class="nav"><button onclick="go(2)">이전</button><div class="spacer"></div>
+    <button class="primary" style="min-width:160px" ${blocked || busy ? "disabled" : ""} onclick="doInstall()">${busy ? "설치하는 중…" : "설치하기"}</button></div>
+    ${busy ? `<div class="card" style="margin-top:10px"><div class="s" id="prog-t">${esc(prog.text)}</div><div style="height:6px;border-radius:3px;background:#2a2d34;margin-top:8px;overflow:hidden"><i id="prog-b" style="display:block;height:100%;width:${prog.pct}%;background:var(--ember);transition:width .2s"></i></div></div>` : ""}`;
+}
+
+let prog = { pct: 0, text: "준비하는 중…" };
+window.__progress = (done, total, name) => {
+  prog.pct = total ? Math.round(done * 100 / total) : 0;
+  prog.text = name + " 받는 중… " + (done / 1048576).toFixed(1) + " / " + (total / 1048576).toFixed(1) + "MB";
+  const t = document.getElementById("prog-t"), b = document.getElementById("prog-b");
+  if (t) t.textContent = prog.text;
+  if (b) b.style.width = prog.pct + "%";
+};
+async function doInstall() {
+  const i = inst(); if (!i) return;
+  busy = true; error = ""; render();
+  try {
+    result = await call("install", i.dir, { memoryMB: keepMem ? 0 : mem, skipMoru, addServer: true });
+    step = 4;
+  } catch (e) { error = e.message; }
+  busy = false; render(true);
+}
+
+function doneView() {
+  const bad = result.filter(r => !r.ok && !/^건너뜀/.test(r.note));
+  return `<h1>${bad.length ? "거의 다 됐어요" : "설치가 끝났어요 🎉"}</h1><p class="lead">CurseForge에서 Soulrend의 <b>플레이</b>를 누르고, 멀티플레이에서 「${esc(S.server)}」에 들어오세요. 게임 안에서 <kbd>P</kbd>를 누르면 잔불 화면이 열려요.</p>
+    <div class="card"><ul class="list">${result.map(r => `<li><div class="status ${r.ok ? "ok" : "warn"}" style="width:28px;height:28px;border-radius:9px;font-size:13px">${r.ok ? "✓" : "!"}</div><div class="grow"><div class="t" style="font-size:14px">${esc(r.title)}</div><div class="s">${esc(r.note)}</div></div></li>`).join("")}</ul></div>
+    <div class="spacer"></div><div class="nav"><button onclick="call('openFolder', inst().dir)">프로필 폴더 열기</button><div class="spacer"></div>
+    <button onclick="call('openCurseForge')">CurseForge 열기</button><button class="primary" onclick="call('quit')">닫기</button></div>`;
+}
+
+refresh();
+setInterval(refresh, 2000);
+</script>
+</body>
+</html>
