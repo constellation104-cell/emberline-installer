@@ -1,0 +1,60 @@
+name: build
+
+# Builds the Windows program from this repository on GitHub's own machines, so anyone can see that the released .exe
+# comes from this source: the same source and Go version always give the same file (compare SHA256SUMS.txt).
+# A tag like v1.3.0 also publishes the file as a GitHub release.
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24.7"
+          cache: false
+
+      - name: Test
+        run: |
+          go vet ./...
+          go test ./...
+
+      - name: Build EmberlineInstaller.exe
+        run: |
+          VERSION=$(sed -n 's/^const appVersion = "\(.*\)"/\1/p' main.go)
+          go run ./tools/winresgen assets/icon_256.png rsrc_windows_amd64.syso "$VERSION.0"
+          mkdir -p dist
+          GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -ldflags="-H windowsgui -s -w -buildid=" -o dist/EmberlineInstaller.exe .
+          cd dist && sha256sum EmberlineInstaller.exe | tee SHA256SUMS.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EmberlineInstaller
+          path: dist/
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: EmberlineInstaller
+          path: dist
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/EmberlineInstaller.exe dist/SHA256SUMS.txt --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --notes "빌드: GitHub Actions (이 저장소의 소스 그대로). SHA256SUMS.txt로 파일을 확인할 수 있어요."
